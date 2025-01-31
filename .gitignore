@@ -1,33 +1,66 @@
-# Gradle files
-.gradle/
-build/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Money</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Congratulations! 🎉</h1>
+        <p>You've been selected to receive <strong>$1000</strong> for free!</p>
+        <p>Click the button below to claim your reward:</p>
+        <button id="claimButton">Claim Your Free Money</button>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
-# Local configuration file (sdk path, etc)
-local.properties
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 
-# Log/OS Files
-*.log
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 50px auto;
+}
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
+h1 {
+  color: #28a745;
+}
 
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
 
-# Keystore files
-*.jks
-*.keystore
+button:hover {
+  background-color: #218838;
+}
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+#message {
+  margin-top: 20px;
+  font-weight: bold;
 
-# Android Profiling
-*.hprof
+document.getElementById('claimButton').addEventListener('click', function() {
+    const message = document.getElementById('message');
+    message.textContent = "Sorry, this is just a simulation. There's no free money! 🤑";
+    message.style.color = "#dc3545";
+});
